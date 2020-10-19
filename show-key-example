@@ -1,0 +1,1 @@
+kubectl describe secrets -n dev gitlab-sa-token-726p7 
