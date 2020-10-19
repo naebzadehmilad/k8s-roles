@@ -1,0 +1,13 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: gitlab
+  namespace: dev
+subjects:
+  - kind: ServiceAccount
+    name: gitlab-sa
+    namespace: dev
+roleRef:
+  kind: Role
+  name: gitlab
+  apiGroup: rbac.authorization.k8s.io
